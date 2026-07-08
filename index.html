@@ -1035,7 +1035,7 @@
       "experience.title": "Experience",
       "experience.subtitle": "Hands-on work applying my technical skills to a real project.",
       "experience.date": "Feb 2025 – May 2025",
-      "experience.role": "Freelance Project",
+      "experience.role": "Development Project",
       "experience.desc": "Collaborated with a development team on the Xrvive project, contributing to the maintenance and improvement of an online platform. Assisted with implementing updates, resolving technical issues, and improving overall performance while helping deliver a reliable and user-friendly experience.",
       "education.eyebrow": "// EDUCATION",
       "education.title": "Education",
@@ -1134,8 +1134,8 @@
       "experience.title": "Expérience",
       "experience.subtitle": "Travail pratique appliquant mes compétences techniques à un projet réel.",
       "experience.date": "Fév 2025 – Mai 2025",
-      "experience.role": "Projet freelance",
-      "experience.desc": "Travail sur l'amélioration et la maintenance d'une plateforme en ligne en implémentant de nouvelles fonctionnalités, en résolvant des problèmes techniques et en améliorant les performances. Collaboration étroite avec les exigences du projet pour garantir une expérience utilisateur fluide et fiable tout au long du développement.",
+      "experience.role": "Projet de développement",
+      "experience.desc": "A collaboré avec une équipe de développement sur le projet Xrvive, en contribuant à la maintenance et à l'amélioration d'une plateforme en ligne. A participé à la mise en œuvre de mises à jour, à la résolution de problèmes techniques et à l'amélioration des performances globales, tout en aidant à offrir une expérience fiable et conviviale.",
       "education.eyebrow": "// FORMATION",
       "education.title": "Formation",
       "education.subtitle": "Mon parcours académique en informatique et en sciences.",
@@ -1200,14 +1200,12 @@
       if (b) b.classList.toggle('active', lang === 'fr');
     });
 
-    localStorage.setItem('preferredLang', lang);
   }
 
-  // Init language from saved preference or browser
+  // Init language from browser preference (default English)
   (function initLang(){
-    const saved = localStorage.getItem('preferredLang');
     const browser = (navigator.language || 'en').slice(0,2);
-    const lang = saved || (browser === 'fr' ? 'fr' : 'en');
+    const lang = browser === 'fr' ? 'fr' : 'en';
     setLang(lang);
   })();
 
